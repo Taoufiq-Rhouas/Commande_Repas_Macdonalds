@@ -1,0 +1,13 @@
+body {
+    background-color: brown;
+}
+.container{
+    background-color: coral;
+}
+
+#btntest{
+    background-color: #bdc3c7;
+    padding: 2% 8%;
+    /* border-color: #bdc3c7; */
+    border-radius: 18%;
+}
