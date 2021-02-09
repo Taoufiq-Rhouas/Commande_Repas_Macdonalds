@@ -1,7 +1,20 @@
 
 <br>
-<div class="container">
-    <section>
+<section>
+    <div class="dropdown" style="float: right;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            Langue
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+            <li><a class="dropdown-item active"  onclick="AR()">AR</a></li>
+            <li><a class="dropdown-item" onclick="AN()">AN</a></li>
+            <li><a class="dropdown-item" onclick="FR()">FR</a></li>
+        </ul>
+    </div>
+</section>
+<br>
+{{!-- <div class="container">
+    <section style="margin-top: -17px;">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
@@ -10,18 +23,16 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="FR()">FR</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" onclick="FR()" style="color: #FDC82F;">FR</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="AN()">AN</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" onclick="AN()" style="color: #FDC82F;">AN</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="AR()">AR</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" onclick="AR()" style="color: #FDC82F;">AR</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/panier">panier</a>
-                        </li>
+                      
                     </ul>
 
                     </div>
@@ -29,7 +40,7 @@
             </nav>
         </div>
     </section><br>
-</div>
+</div> --}}
 <div class="container">
 
     <input type="hidden" id="menuFR" value="{{menuFR}}">
@@ -39,30 +50,30 @@
 
     <center>
         <h1 id="Result_Nameprodact" ></h1>
-        <h1>{{id}}</h1>
+        {{!-- <h1>{{id}}</h1> --}}
         <img src="/images/{{chemin_img}}/lg_{{img}}" alt="">
         <input type="hidden" name="imgchemain" id="imgchemain" value="{{chemin_img}}">
         <input type="hidden" name="imgpromenu" id="imgpromenu" value="{{img}}">
     </center>
+    <center>
     <h2>
-        <span>prix : </span><span id="prix">{{prix}}</span><span> DH</span>
+        <span style="color: red;">prix : </span><span id="prix">{{prix}}</span><span> DH</span>
     </h2>
     
 </div>
 
 
-<hr>
-
+<center>
 <div class="container">
-    <h1>Value</h1>
-
-    <div class="input-group mb-3">
+    <h1 style="color: #FDC82F;">Value</h1>
+    
+    <div class="input-group mb-3" style="width: 50%;">
         <input type="number" class="form-control" name="contityVal" id="contityVal" placeholder="taper ure value">
         <input type="button" value="Save" id="btnSave" onclick="savee()" class="btn btn-outline-secondary" >
     </div>
     <h1 id="showdata"></h1>
 </div>
-
+</center>
 
 <script>
 
@@ -145,8 +156,9 @@
             ]
             localStorage.setItem("data", JSON.stringify(obj1));
             console.log("== null");
-            document.getElementById("btnSave").value="Dor 100";
+            document.getElementById("btnSave").value="Save";
             document.getElementById("btnSave").disabled = true;
+            window.location.assign("http://localhost:3000/panier");
         }else{
 
             let old_data = JSON.parse(localStorage.getItem('data'));
@@ -155,8 +167,10 @@
 
             localStorage.setItem('data' , JSON.stringify(old_data));
             console.log("== else");
-            document.getElementById("btnSave").value="Dor 100";
+            document.getElementById("btnSave").value="Save";
             document.getElementById("btnSave").disabled = true;
+            window.location.assign("http://localhost:3000/panier");
+
         }
         
     }

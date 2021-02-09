@@ -1,5 +1,17 @@
 
 <br>
+<section>
+    <div class="dropdown" style="float: right;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            Langue
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+            <li><a class="dropdown-item active"  onclick="AR()">AR</a></li>
+            <li><a class="dropdown-item" onclick="AN()">AN</a></li>
+            <li><a class="dropdown-item" onclick="FR()">FR</a></li>
+        </ul>
+    </div>
+</section>
 <div class="container">
     <section>
         <div class="container">
@@ -10,45 +22,45 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" id="Tout" onclick="show_tout()">Tout</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link active" style="color: #FDC82F;"  aria-current="page" id="Tout" onclick="show_tout()">Tout</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="show_menus()" id="Nos_Menus">Nos Menus</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" style="color: #FDC82F;"  onclick="show_menus()" id="Nos_Menus">Nos Menus</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="show_sandwichs()" id="Nos_Sandwichs">Nos Sandwichs</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" style="color: #FDC82F;"  onclick="show_sandwichs()" id="Nos_Sandwichs">Nos Sandwichs</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="show_Petites_faims()" id="Petites_faims">Petites faims</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" style="color: #FDC82F;"  onclick="show_Petites_faims()" id="Petites_faims">Petites faims</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="show_salades()" id="Nos_salades">Nos salades</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" style="color: #FDC82F;"  onclick="show_salades()" id="Nos_salades">Nos salades</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="show_desserts()" id="Nos_desserts">Nos desserts</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" style="color: #FDC82F;"  onclick="show_desserts()" id="Nos_desserts">Nos desserts</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="show_boissons()" id="Nos_boissons">Nos boissons</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" style="color: #FDC82F;"  onclick="show_boissons()" id="Nos_boissons">Nos boissons</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="show_frites()" id="Nos_frites">Nos frites</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" style="color: #FDC82F;"  onclick="show_frites()" id="Nos_frites">Nos frites</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="show_sauces()" id="Nos_sauces">Nos sauces</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" style="color: #FDC82F;"  onclick="show_sauces()" id="Nos_sauces">Nos sauces</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="show_McCafe()" id="McCafe">Nos Café</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" style="color: #FDC82F;"  onclick="show_McCafe()" id="McCafe">Nos Café</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="FR()">FR</a>
+                        {{!-- <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" style="color: #FDC82F;"  onclick="FR()">FR</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="AN()">AN</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" style="color: #FDC82F;"  onclick="AN()">AN</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="AR()">AR</a>
-                        </li>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" style="color: #FDC82F;"  onclick="AR()">AR</a>
+                        </li> --}}
                         
                     </ul>
 
@@ -77,7 +89,7 @@
                 </a>
             </div>
             <div class="col-4 col-md-2 boxproduct_boissons">
-                <a href="/product_menu/boissons/{{_id}}" class="btn Commander"></a>
+                <a href="/product_menu/boissons/{{_id}}" class="btn Commander">
                     <center>
                         <img src="/images/images_Boissons/{{imgBoissons}}" alt="">
                         <p>{{boissonsFR}}</p>

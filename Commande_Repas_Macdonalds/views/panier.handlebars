@@ -1,30 +1,40 @@
 {{!-- <link rel="stylesheet" type="text/css" href="/css/csshome.css"> --}}
-<br>
 
-<div class="container" >
-    <section id="cc">
+<br>
+<section>
+    <div class="dropdown" style="float: right;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            Langue
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+            <li><a class="dropdown-item active"  onclick="AR()">AR</a></li>
+            <li><a class="dropdown-item" onclick="AN()">AN</a></li>
+            <li><a class="dropdown-item" onclick="FR()">FR</a></li>
+        </ul>
+    </div>
+</section>
+<br>
+<br>
+{{!-- <div class="container">
+    <section>
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    {{!-- <a class="navbar-brand" href="/">Node Contacts App</a> --}}
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="FR()">FR</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" onclick="FR()" style="color: #FDC82F;">FR</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="AN()">AN</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" onclick="AN()" style="color: #FDC82F;">AN</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="AR()">AR</a>
+                        <li class="nav-item" style="cursor: pointer;">
+                            <a class="nav-link" onclick="AR()" style="color: #FDC82F;">AR</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/panier">panier</a>
-                        </li>
-                        
+                      
                     </ul>
 
                     </div>
@@ -32,7 +42,7 @@
             </nav>
         </div>
     </section><br>
-</div>
+</div> --}}
 <div class="container">
 
     <table class="table">
@@ -106,7 +116,7 @@
             body_table.innerHTML += '<tr><td><img src="/images/'+old_data[i].imgchemainData+'/../'+old_data[i].imgData+'" alt=""></td> <td>'+old_data[i].nameData+'  <br><input type="hidden" id="prixOneProdactData2'+i+'" value="'+old_data[i].prixData+'">   <p><span id="prixOneProdactData'+i+'" >'+old_data[i].prixData+'</span><span> DH </span></p></td> <td></td> <td><input type="number" name="contityVal" id="contityVal'+i+'" placeholder="taper ure valuer" value="'+old_data[i].contityData+'" class="form-control">   </td> <td><p id="prixOneProdact'+i+'">'+prixOneProdact+'</p>  <input type="hidden" id="prixOneProdact2'+i+'" value="'+prixOneProdact+'"><td><input type="button" value="Calcule Total" onclick="updateval('+i+')" class="btn btn-outline-success"></td></tr>';
             prixOneProdact = 0;
         }
-        body_table.innerHTML += '<tr><p>Prix Total : <span id="prixtotal">'+prixProdactTotal+'</span> DH</p><input type="hidden" id="prixtotal2" value="'+prixProdactTotal+'"></tr>';
+        body_table.innerHTML += '<tr><p style="color:red;">Prix Total : <span id="prixtotal">'+prixProdactTotal+'</span> DH</p><input type="hidden" id="prixtotal2" value="'+prixProdactTotal+'"></tr>';
 
         if(localStorage.getItem('PrixTotal') == null){
             
